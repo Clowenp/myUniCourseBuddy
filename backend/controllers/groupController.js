@@ -10,3 +10,7 @@ const createGroup = asyncHandler( async(req, res) => {
 const getGroupInfo = asyncHandler( async(req, res) => {
     
 })
+
+module.exports = {
+    createGroup, getGroupInfo
+}

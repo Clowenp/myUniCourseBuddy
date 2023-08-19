@@ -77,3 +77,7 @@ const getAllGroups = asyncHandler( async(req, res) => {
 
     res.status(200).json(members)
 }) 
+
+module.exports = {
+    registerUser, getAllGroups, getUserId
+}
