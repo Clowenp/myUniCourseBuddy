@@ -4,6 +4,7 @@
 
 body {
     overflow: hidden;
+    background-image: url(../public/unis.png);
 }
 
 
@@ -26,7 +27,7 @@ body {
 }
 
 .login-form-textbox {
-    background-color: rgb(206, 206, 206);
+    background-color: white;
     padding: 5px;
     margin: 5px;
     border: 1px solid black;
@@ -44,4 +45,12 @@ body {
     font-size: 25px;
     margin: 10px;
     position: absolute;
+}
+
+.register-form-unidropdown {
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5%;
 }

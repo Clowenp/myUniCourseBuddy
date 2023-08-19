@@ -15,13 +15,14 @@ export default function Home() {
                placeholder="username"
                className="login-form-textbox" />
         {/* <label for="password">password:</label> */}
-        <input type="text" 
+        <input type="password" 
                name="password"
                placeholder="password"
                className="login-form-textbox" />
         <button type="submit" className='login-form-submit'>Log-in!</button>
         <p>Don't have an account? <Link href="/register">Register</Link> here!</p>
       </form>
+      {/* <Link href="/register" /> */}
     </div>
   )
 }
