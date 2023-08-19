@@ -16,6 +16,10 @@ const scheduleSchema = mongoose.Schema({
         type: [mongoose.Schema.Types.ObjectId],
         required: true,
         ref: 'Courses'
+    },
+    course_sections_ids : {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: 'CourseSections'
     }
 })
 
