@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler')
-const User = require('../models/groupModel')
+const Group = require('../models/groupModel')
 
 
 const createGroup = asyncHandler( async(req, res) => {
@@ -11,15 +11,15 @@ const createGroup = asyncHandler( async(req, res) => {
         throw new Error('Missing Fields')
     }
 
-    // check if user exists
-    const codeExists = await User.findOne({access_code})
+    // check if group exists
+    const codeExists = await Group.findOne({access_code})
 
     if(codeExists){
         res.status(400)
         throw new Error('Access Code already exists')
     }
 
-    // create user
+    // create group
     const group = await Group.create({
         members,
         access_code,
@@ -29,9 +29,9 @@ const createGroup = asyncHandler( async(req, res) => {
     if(group){
         res.status(201).json({
             _id: group.id,
-            members: user.members,
-            overlap_time: user.overlap_time,
-            access_code: user.access_code
+            members: group.members,
+            overlap_time: group.overlap_time,
+            access_code: group.access_code
         })
     }
     else{
