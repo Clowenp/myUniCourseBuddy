@@ -1,5 +1,5 @@
 // Home page = Log-in Page.
-import Header from "./components/header.js"
+import Header from "./components/header"
 export default function Home() {
   return (
     // (note) handle event such that new link isnt http://localhost:3000/?username=&password=
