@@ -19,7 +19,9 @@ export default function Home() {
                name="password"
                placeholder="password"
                className="login-form-textbox" />
-        <button type="submit" className='login-form-submit'>Log-in!</button>
+        <Link href="/landing-page">
+          <button type="submit" className='login-form-submit'>Log-in!</button>
+        </Link>
         <p>Don't have an account? <Link href="/register">Register</Link> here!</p>
       </form>
       {/* <Link href="/register" /> */}
