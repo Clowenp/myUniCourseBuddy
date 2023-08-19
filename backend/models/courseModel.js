@@ -6,9 +6,6 @@ const courseSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    professor : {
-        type: String,
-    },
     description : {
         type: String,
     },
