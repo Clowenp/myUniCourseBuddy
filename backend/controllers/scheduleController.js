@@ -62,21 +62,23 @@ const createSchedule = asyncHandler( async(req, res) => {
 }) 
 
 const addScheduleSection = asyncHandler( async(req, res) => {
-    
     const { schedule_id } = req.params
-    const { course_section_ids } = req.body
-
-    if (!schedule_id || !course_section_ids ) {
+    const { course_sections_ids } = req.body
+    
+    if (!schedule_id || !course_sections_ids ) {
         res.status(400)
         throw new Error("Missing Fields");
     }
 
-    const scheduleExists = await Schedule.findByIdAndUpdate(schedule_id, {course_section_ids: course_section_ids})
-
+    const scheduleExists = await Schedule.findByIdAndUpdate(schedule_id, {"course_sections_ids": course_sections_ids})
     if (!scheduleExists) {
         res.status(400)
         throw new Error("Schedule Not Updated");
     }
+    
+    const newSchedule = await Schedule.findByIdAndUpdate({"_id": schedule_id})
+
+    res.status(200).json(newSchedule)
 }) 
 
 module.exports = {
