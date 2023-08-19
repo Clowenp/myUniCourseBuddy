@@ -4,7 +4,8 @@ const courseSectionSchema = mongoose.Schema({
 
     course_id : {
         type: mongoose.Schema.Types.ObjectId,
-        required: true
+        required: true,
+        ref: 'Courses'
     },
     day : {
         type: [Number],
