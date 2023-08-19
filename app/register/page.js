@@ -1,14 +1,11 @@
-// Home page = Log-in Page.
-import Header from "./components/header"
+import Header from '../components/header'
 import Link from 'next/link'
-// import Register from "./pages/register"
-export default function Home() {
-  return (
-    // (note) handle event such that new link isnt http://localhost:3000/?username=&password=
-    <div>
+export default function Register() {
+    return(
+        <div>
       <Header />
       <form className='login'>
-        <h1>Log-in</h1>
+        <h1>Create an Account!</h1>
         {/* <label for="username">username:</label> */}
         <input type="text"
                name="username"
@@ -19,9 +16,12 @@ export default function Home() {
                name="password"
                placeholder="password"
                className="login-form-textbox" />
-        <button type="submit" className='login-form-submit'>Log-in!</button>
-        <p>Don't have an account? <Link href="/register">Register</Link> here!</p>
+        <input type="text" 
+               name="password"
+               placeholder="re-enter password"
+               className="login-form-textbox" />
+        <button type="submit" className='login-form-submit'>Register!</button>
       </form>
     </div>
-  )
+    )
 }
