@@ -71,7 +71,7 @@ const getUserId = asyncHandler( async(req, res) => {
 
 const getAllGroups = asyncHandler( async(req, res) => {
     
-    const { user_id } = req.params.user_id
+    const { user_id } = req.params
 
     const members = await Group.find({members: user_id})
 
