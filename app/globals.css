@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    overflow: hidden;
+}
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.login > h1 {
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.login > p > a {
+    color: rgb(162, 162, 162);
+}
+
+.login-form-textbox {
+    background-color: rgb(206, 206, 206);
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.login-form-submit {
+    border: 1px solid black;
+    border-radius: 8%;
+    width: 100px;
+    margin: 5px;
+}
+
+.header-text {
+    font-size: 25px;
+    margin: 10px;
+    position: absolute;
+}
