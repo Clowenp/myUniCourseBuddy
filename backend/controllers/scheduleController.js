@@ -63,7 +63,8 @@ const createSchedule = asyncHandler( async(req, res) => {
 
 const addScheduleSection = asyncHandler( async(req, res) => {
     
-    const { schedule_id, course_section_ids } = req.body
+    const { schedule_id } = req.params
+    const { course_section_ids } = req.body
 
     if (!schedule_id || !course_section_ids ) {
         res.status(400)
