@@ -1,0 +1,19 @@
+.schedule-table{
+    border:1px solid black;
+    text-align:center;
+}
+
+th{
+    width:150px;
+    border:1px solid black;
+    background-color:gray;
+}
+#time-slots{
+    width:90px;
+}
+tr{
+    border-bottom:1px solid black
+}
+td{
+    border:1px solid black;
+}
