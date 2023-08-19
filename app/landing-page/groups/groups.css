@@ -1,0 +1,25 @@
+.group-cards{
+    width:800px;
+    height: 300px;
+    display:flex;
+    justify-content:left;
+    padding-left: 50px;
+}
+
+button{
+    width: 100px;
+    border-radius:8px;
+    border:1px solid black;
+    margin:5px;
+    /* display:flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+
+}
+.button-group{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+}
