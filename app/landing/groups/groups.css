@@ -2,18 +2,15 @@
     width:900px;
     height: 250px;
     display:flex;
-    /* display:none; */
+    white-space: nowrap;
     justify-content:left;
-    padding-left: 50px;
+    padding-left: 250px;
     border:1px solid black;
     justify-content:center;
-    /* overflow-x:scroll; */
-    overflow-y:hidden;
-    padding:20px;
+    overflow-x:hidden;
+    
     margin:15px;
-    white-space: nowrap;
 }
-
 button{
     width: 100px;
     border-radius:8px;
