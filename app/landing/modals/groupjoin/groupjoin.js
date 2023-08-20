@@ -1,10 +1,7 @@
 import './groupjoin.css'
 export default function GroupJoin(props){
-    let styles = {
-        display: props.showJoin ? "flex": "none",
-      }
     return(
-        <div className="group-join" style={styles}>
+        <div className="group-join">
             <h3>Enter your invite link!</h3>
             <form>
                 <input type="text" placeholder="Invite Code"></input>

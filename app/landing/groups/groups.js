@@ -15,18 +15,17 @@ export default function Groups(props){
     }
 ];
     let styles = {
-        // overflowX: "scroll",
         overflowX: groupsInfo.length > 3 ? "scroll" : "hidden",
     }
     let groups = groupsInfo.map((group) => {
         return <GroupCard key={group.name} name={group.name} members={group.members}/>
     });
     let getCreate = () => {
-        props.setCreate(true);
+        props.setModal("create");
     }
     let getJoin = () => {
-        props.setJoin(true);
-        console.log(props.getJoin)
+        props.setModal("join");
+        // console.log("jsdfd")
     }
     return(
         <div className="groups">

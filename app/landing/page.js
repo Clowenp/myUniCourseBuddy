@@ -12,23 +12,18 @@ export default function Landing() {
   let [createState, setCreateState] = React.useState(false);
   let [inviteState, setInviteState] = React.useState(false);
   let [joinState, setJoinState] = React.useState(false);
+  let [modalState, setModalState] = React.useState("none");
   return (
     <html lang="en">
       <body>
-      <GroupCreate 
-      setCreate={setCreateState} 
-      showCreate={createState} 
-      showInvite={inviteState} 
-      setInvite={setInviteState}/>
-      <GroupInvite
-        showInvite={inviteState}
-        setInvite={setInviteState}
-      />
-      <GroupJoin
-        showJoin={joinState}
-        setJoin={setJoinState}
-      />
-        <Groups setCreate={setCreateState} setJoin={setJoinState} getJoin={joinState} />
+        {modalState==="create" && <GroupCreate setModal={setModalState}/>}
+        {/* <GroupInvite
+          showInvite={inviteState}
+          setInvite={setInviteState}
+        /> */}
+        {modalState==="invite" && <GroupInvite setModal={setModalState} />}
+        {modalState==="join" && <GroupJoin />}
+        <Groups setModal={setModalState} setCreate={setCreateState} setJoin={setJoinState} getJoin={joinState} />
         
         <Schedule/>
       </body>
