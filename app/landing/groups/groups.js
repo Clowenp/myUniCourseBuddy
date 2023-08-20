@@ -12,10 +12,14 @@ export default function Groups(props){
     {
         name: "Group 3",
         members: ["Ofan", "Mehmet", "Daud", "Kaibin"]
+    },
+    {
+        name: "Groupe title 4",
+        members: ["Matt", "Teo"]
     }
 ];
     let styles = {
-        overflowX: groupsInfo.length > 3 ? "scroll" : "hidden",
+        overflowX: groupsInfo.length > 3 ? "auto" : "hidden",
     }
     let groups = groupsInfo.map((group) => {
         return <GroupCard key={group.name} name={group.name} members={group.members}/>

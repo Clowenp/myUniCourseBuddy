@@ -10,7 +10,13 @@
     top: 30%;
     border-radius:10px;
 }
-
+.exit-modal{
+    position:absolute;
+    right:5px;
+}
+.exit-modal:hover{
+    cursor:pointer;
+}
 .creategroup{
     margin-top:25px;
     display:flex;

@@ -22,7 +22,7 @@ export default function Landing() {
           setInvite={setInviteState}
         /> */}
         {modalState==="invite" && <GroupInvite setModal={setModalState} />}
-        {modalState==="join" && <GroupJoin />}
+        {modalState==="join" && <GroupJoin setModal={setModalState}/>}
         <Groups setModal={setModalState} setCreate={setCreateState} setJoin={setJoinState} getJoin={joinState} />
         
         <Schedule/>
