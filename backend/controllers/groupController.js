@@ -44,9 +44,9 @@ const createGroup = asyncHandler( async(req, res) => {
 const getGroupInfo = asyncHandler( async(req, res) => {
     const { group_id } = req.params
 
-    const groupExists = await Group.findOne({group_id})
+    const groupExists = await Group.findOne({"_id": group_id})
 
-    if (!groupExists) {
+    if (groupExists) {
         res.status(400)
         throw new Error('Group Id Already Exists')
     }
@@ -54,6 +54,32 @@ const getGroupInfo = asyncHandler( async(req, res) => {
     res.status(200).json(groupExists)
 })
 
+const addGroupMember = asyncHandler( async (req, res) => {
+    const { group_id } = req.params;
+    const { user_id } = req.body;
+
+    if(!user_id) {
+        res.status(400)
+        throw new Error('user_id does not exist')
+    }
+
+
+    const groupExists = await Group.findOne({"_id": group_id})
+    if(groupExists["members"].includes(user_id)) {
+        res.status(400)
+        throw new Error('user_id is already in this group')
+    }
+    console.log(groupExists)
+    if (!groupExists) {
+        res.status(400)
+        throw new Error('Group Id doesnt Exist')
+    }
+
+    await Group.findByIdAndUpdate(group_id, {members: [...groupExists["members"], user_id]})
+    const newGroup = await Group.findById(group_id);
+    res.status(200).json(newGroup);
+})
+
 module.exports = {
-    createGroup, getGroupInfo
+    createGroup, getGroupInfo, addGroupMember
 }

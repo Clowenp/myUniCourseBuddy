@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"nodemon backend/server.js\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.15",
+    "axios": "^1.4.0",
+    "concurrently": "^8.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "eslint": "8.47.0",
