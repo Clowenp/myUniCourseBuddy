@@ -1,6 +1,7 @@
 .schedule-table{
     border:1px solid black;
     text-align:center;
+    margin-bottom:1rem;
 }
 
 th{
