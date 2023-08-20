@@ -1,9 +1,16 @@
 .group-cards{
-    width:800px;
-    height: 300px;
+    width:900px;
+    height: 250px;
     display:flex;
+    /* display:none; */
     justify-content:left;
     padding-left: 50px;
+    border:1px solid black;
+    justify-content:center;
+    /* overflow-x:scroll; */
+    overflow-y:hidden;
+    padding:20px;
+    margin:15px;
 }
 
 button{

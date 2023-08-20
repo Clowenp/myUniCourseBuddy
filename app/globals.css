@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     background-image: url(../public/unis.png);
+    /* background-color: rgba(255, 0, 0, 0); */
 }
 
 
