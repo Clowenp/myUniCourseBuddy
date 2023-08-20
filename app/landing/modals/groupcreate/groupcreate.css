@@ -1,15 +1,22 @@
 .group-create{
-    /* display: none; */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    height: 230x;
+    height: 190px;
     width:280px;
     background-color:white;
     border:1px solid black;
     position:absolute;
     top: 30%;
+    border-radius:10px;
 }
-
+.exit-modal{
+    position:absolute;
+    right:5px;
+}
+.exit-modal:hover{
+    cursor:pointer;
+}
 .creategroup{
     margin-top:25px;
     display:flex;

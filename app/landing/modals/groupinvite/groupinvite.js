@@ -3,17 +3,22 @@ export default function GroupInvite(props) {
     let getLink = () => {
         return "CmuasI21E9";
     }
-    let styles = {
-        display: props.showInvite ? "flex" : "none",
+    let copyLink = () => {
+        navigator.clipboard.writeText(getLink());
+    }
+    let exitModal = () => {
+        props.setModal("none");
     }
     return (
-        <div className="group-invite" style={styles}>
+        <div className="group-invite">
+            <div className="exit-modal" onClick={exitModal}>X</div>
             <h1>Group Created!</h1>
             <p>Invite your friends to join your group!</p>
-            <div className="group-join" style={styles}>
-                <h3>{props.groupName}</h3>
+            <div className="groups-join" >
+                <div className="copy-text" onClick={copyLink}>Copy</div>
+                {/* <h3>{props.groupName}</h3> */}
                 <div className="join-link">
-                    {getLink()}
+                    <p>{getLink()}</p>
                 </div>
             </div>
         </div>
