@@ -4,8 +4,19 @@
 
 body {
     /* overflow: hidden; */
-    background-image: url(../public/unis.png);
+    background-image: url(../public/unis3.png);
+    background-size: cover;
+    animation: slide 15s linear infinite;
     /* background-color: rgba(255, 0, 0, 0); */
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 95%;
+    }
 }
 
 
@@ -19,12 +30,18 @@ body {
 }
 
 .login > h1 {
-    font-size: 30px;
-    padding-bottom: 30px;
+    font-size: 40px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .login > p > a {
     color: rgb(162, 162, 162);
+}
+
+.login > p {
+    padding-top: 5px;
+    font-size: 20px;
 }
 
 .login-form-textbox {
@@ -32,20 +49,42 @@ body {
     padding: 5px;
     margin: 5px;
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+    height: 45px;
+    width: 250px;
+}
+
+.login-form-textbox::placeholder {
+    font-size: 22px;
 }
 
 .login-form-submit {
     border: 1px solid black;
-    border-radius: 8%;
-    width: 100px;
+    border-radius: 6px;
+    height: 34px;
+    width: 150px;
+    font-size: 22px;
     margin: 5px;
+    background-color: white;
+    transition: background-color 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header-text {
-    font-size: 25px;
+button:hover {
+    background-color: #686868;
+    color: white
+}
+
+.header {
+    font-size: 36px;
     margin: 10px;
+    /* background: linear-gradient(45deg, #f06, #9f6); */
     position: absolute;
+    border-bottom: 2px solid #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+    /* color: transparent; */
 }
 
 .register-form-unidropdown {
@@ -53,5 +92,9 @@ body {
     padding: 5px;
     margin: 5px;
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+    height: 34px;
+    width: 250px;
 }

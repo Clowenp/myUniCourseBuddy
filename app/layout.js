@@ -1,17 +1,23 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Ubuntu } from '@next/font/google'
+// import { Barriecito } from '@next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '400']
+})
+
 
 export const metadata = {
   title: 'myUniCourseBuddy',
   description: 'project for hackthe6ix!',
 }
+
 //work on course schedule display(bottom half of page)
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={ubuntu.className}>
+      <body>{children}</body>
     </html>
   )
 }

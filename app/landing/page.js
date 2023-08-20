@@ -5,15 +5,17 @@ import './page.css'
 import GroupCreate from './modals/groupcreate/groupcreate';
 import Schedule from './schedule/schedule.js';
 import Groups from './groups/groups.js';
-import { Inter } from 'next/font/google'
 import GroupInvite from './modals/groupinvite/groupinvite';
 import GroupJoin from './modals/groupjoin/groupjoin';
+import Header from '../components/header'
 export default function Landing() {
   let [createState, setCreateState] = React.useState(false);
   let [inviteState, setInviteState] = React.useState(false);
   let [joinState, setJoinState] = React.useState(false);
+
   return (
-    <html lang="en">
+    <div>
+      <Header />
       <body>
       <GroupCreate 
       setCreate={setCreateState} 
@@ -32,6 +34,6 @@ export default function Landing() {
         
         <Schedule/>
       </body>
-    </html>
+      </div>
   )
 }
