@@ -1,4 +1,5 @@
 .group-cards{
+    padding-top: 10px;
     width:900px;
     height: 250px;
     display:flex;

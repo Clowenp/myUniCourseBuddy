@@ -2,20 +2,20 @@ import './groups.css'
 import GroupCard from './group-card/group-card.js'
 export default function Groups(props){
     let groupsInfo = [{
-        name: "Group 1",
-        members: ["Person 1", "Person 2", "Person 3"]
+        name: "Hackthe6ix Dream Team",
+        members: ["Owen ", "Mateo ", "David ", "Kevin "]
     },
     {
-        name: "Group 2",
-        members: ["Owen", "Mateo", "David", "Kevin"]
+        name: "Hackthe6ix Original Team",
+        members: ["Ethan ", "Mateo ", "David ", "Kevin "]
     },
     {
-        name: "Group 3",
-        members: ["Ofan", "Mehmet", "Daud", "Kaibin"]
+        name: "CS Friends",
+        members: ["Owen ", "David ", "Ryan ", "Kevin "]
     },
     {
-        name: "Groupe title 4",
-        members: ["Matt", "Teo"]
+        name: "Math Major Friends",
+        members: ["Mateo ", "Bennie "]
     }
 ];
     let styles = {
